@@ -1,0 +1,312 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap");
+*,
+*::before,
+*::after {
+  margin: 0px;
+  padding: 0px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 0.8px;
+}
+
+body {
+  background-color: #e6e6e6;
+}
+
+.app {
+  display: -ms-grid;
+  display: grid;
+}
+
+header,
+main,
+footer {
+  width: 600px;
+  -ms-grid-column-align: center;
+      justify-self: center;
+}
+
+header {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 200px 200px 140px;
+      grid-template-columns: 200px 200px 140px;
+  grid-column-gap: 32px;
+}
+
+header label.city {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1/2;
+}
+
+header label.country {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2/3;
+}
+
+header label {
+  background-color: white;
+  border-radius: 0.5rem;
+  text-align: center;
+}
+
+header label input {
+  border: none;
+  font-size: 14px;
+  height: 2rem;
+  outline: none;
+}
+
+header label input:focus {
+  border-bottom: solid;
+}
+
+header button {
+  -ms-grid-column: 3;
+  grid-column: 3;
+  background-color: #443a74;
+  color: white;
+  border: none;
+  border-radius: 1rem;
+  font-size: 12px;
+  font-weight: bold;
+  cursor: pointer;
+  outline: none;
+}
+
+header button:hover {
+  background-color: #302951;
+}
+
+main {
+  background-color: white;
+  border-radius: 1rem;
+  height: 21rem;
+  -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.16);
+          box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.16);
+  display: -ms-grid;
+  display: grid;
+  padding-top: 1rem;
+  -ms-grid-rows: 3rem 5rem 4rem 2rem 5rem;
+      grid-template-rows: 3rem 5rem 4rem 2rem 5rem;
+}
+
+main div.temp {
+  grid-column: 1/-1;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1/2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  font-size: 1.6rem;
+}
+
+main div.image {
+  grid-column: 1/-1;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2/3;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main div.description {
+  -ms-grid-column-align: center;
+      justify-self: center;
+  font-size: 1rem;
+  text-transform: capitalize;
+  color: #707070;
+}
+
+main div.minAndMaxTemp {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+main div.minAndMaxTemp span {
+  font-size: 1rem;
+  color: #707070;
+}
+
+main div.minAndMaxTemp span.bar {
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+}
+
+main div.humidity {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  font-size: 1rem;
+  color: #707070;
+  line-height: 1.7;
+}
+
+div.firstLookImage {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+div.firstLookImage P {
+  margin-bottom: 1rem;
+}
+
+div.firstLookImage img {
+  width: 320px;
+  border-radius: 0.8rem;
+}
+
+footer {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (150px)[4];
+      grid-template-columns: repeat(4, 150px);
+  margin-top: 2rem;
+}
+
+footer a {
+  text-align: center;
+  text-decoration: none;
+  color: #707070;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+footer a.github {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1/2;
+}
+
+footer a.twitter {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2/3;
+}
+
+footer a.portfolio {
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 1;
+  grid-column: 3/4;
+}
+
+footer a.dribble {
+  -ms-grid-column: 4;
+  -ms-grid-column-span: 1;
+  grid-column: 4/5;
+}
+
+@media (max-width: 600px) {
+  div.app header {
+    width: 320px;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 320px;
+        grid-template-columns: 320px;
+    -ms-grid-rows: 32px 32px 32px;
+        grid-template-rows: 32px 32px 32px;
+    grid-row-gap: 0.5rem;
+  }
+  div.app header label.city {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1/2;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    grid-row: 1/2;
+  }
+  div.app header label.country {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1/2;
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    grid-row: 2/3;
+  }
+  div.app header button {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1/2;
+    -ms-grid-row: 3;
+    -ms-grid-row-span: 1;
+    grid-row: 3/4;
+  }
+  main {
+    width: 320px;
+  }
+  footer {
+    width: 320px;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (150px)[2];
+        grid-template-columns: repeat(2, 150px);
+    -ms-grid-rows: (42px)[2];
+        grid-template-rows: repeat(2, 42px);
+  }
+  footer a {
+    text-align: center;
+    text-decoration: none;
+    color: #707070;
+    font-size: 14px;
+    font-weight: bold;
+  }
+  footer a.github {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1/2;
+  }
+  footer a.twitter {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-column: 2/3;
+  }
+  footer a.portfolio {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1/2;
+  }
+  footer a.dribble {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-column: 2/3;
+  }
+}
+/*# sourceMappingURL=style.css.map */

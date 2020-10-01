@@ -1,5 +1,8 @@
 # Weather App
-This project has been build as part of learning react js process.
+This project has been build as part of my learning react js process.
+
+## APIs
+[Open Weather](https://openweathermap.org/ 'open weather') has been used to collect weather data of specific city.
 
 
 

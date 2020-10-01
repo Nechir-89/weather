@@ -1,0 +1,216 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap");
+
+*,
+*::before,
+*::after {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+    letter-spacing: 0.8px;
+}
+
+body {
+    background-color: #e6e6e6;
+}
+.app {
+    display: grid;
+}
+header,
+main,
+footer {
+    width: 600px;
+    justify-self: center;
+}
+header {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+
+    display: grid;
+    grid-template-columns: 200px 200px 140px;
+    grid-column-gap: 32px;
+
+    label.city {
+        grid-column: 1/2;
+    }
+    label.country {
+        grid-column: 2/3;
+    }
+    label {
+        background-color: white;
+        border-radius: 0.5rem;
+        text-align: center;
+        input {
+            border: none;
+            font-size: 14px;
+            height: 2rem;
+            outline: none;
+        }
+        input:focus {
+            border-bottom: solid;
+        }
+    }
+    button {
+        grid-column: 3;
+        background-color: #443a74;
+        color: white;
+        border: none;
+        border-radius: 1rem;
+        font-size: 12px;
+        font-weight: bold;
+        cursor: pointer;
+        outline: none;
+        &:hover {
+            background-color: #302951;
+        }
+    }
+}
+
+main {
+    background-color: white;
+    border-radius: 1rem;
+    height: 21rem;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.16);
+
+    display: grid;
+    padding-top: 1rem;
+    grid-template-rows: 3rem 5rem 4rem 2rem 5rem;
+    div.temp {
+        grid-column: 1/-1;
+        grid-row: 1/2;
+
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+
+        font-size: 1.6rem;
+    }
+
+    div.image {
+        grid-column: 1/-1;
+        grid-row: 2/3;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    div.description {
+        justify-self: center;
+        font-size: 1rem;
+        text-transform: capitalize;
+        color: #707070;
+    }
+
+    div.minAndMaxTemp {
+        display: flex;
+        justify-content: center;
+        span {
+            font-size: 1rem;
+            color: #707070;
+        }
+        span.bar {
+            margin-left: 1.5rem;
+            margin-right: 1.5rem;
+        }
+    }
+
+    div.humidity {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        font-size: 1rem;
+        color: #707070;
+        line-height: 1.7;
+    }
+}
+div.firstLookImage{
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    P{
+        margin-bottom: 1rem;
+    }
+    img{
+        width: 320px;
+        border-radius: 0.8rem;
+    }
+}
+footer{
+    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(4,150px);
+    margin-top: 2rem;
+    a{
+        text-align: center;
+        text-decoration: none;
+        color: #707070;
+        font-size: 14px;
+        font-weight: bold;
+    }
+    a.github{
+        grid-column: 1/2;
+    }
+    a.twitter{
+        grid-column: 2/3;
+    }
+    a.portfolio{
+        grid-column: 3/4;
+    }
+    a.dribble{
+        grid-column: 4/5;
+    }
+}
+// mobile screen 320px wide
+
+@media (max-width: 600px) {
+    div.app header {
+        width: 320px;
+        display: grid;
+        grid-template-columns: 320px;
+        grid-template-rows: 32px 32px 32px;
+        grid-row-gap: 0.5rem;
+        label.city {
+            grid-column: 1/2;
+            grid-row: 1/2;
+        }
+        label.country {
+            grid-column: 1/2;
+            grid-row: 2/3;
+        }
+        button {
+            grid-column: 1/2;
+            grid-row: 3/4;
+        }
+    }
+    main{
+        width: 320px;
+    }
+    footer{
+        width: 320px;
+        display: grid;
+        grid-template-columns: repeat(2,150px);
+        grid-template-rows: repeat(2,42px);
+        // margin-top: 2rem;
+        a{
+            text-align: center;
+            text-decoration: none;
+            color: #707070;
+            font-size: 14px;
+            font-weight: bold;
+        }
+        a.github{
+            grid-column: 1/2;
+        }
+        a.twitter{
+            grid-column: 2/3;
+        }
+        a.portfolio{
+            grid-column: 1/2;
+        }
+        a.dribble{
+            grid-column: 2/3;
+        }
+    }
+}
