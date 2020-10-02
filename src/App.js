@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
 
-const apikey = '332915fda97cbc7c58e26fd550a80e92';
-
 function App() {
 
   const [city, setCity] = useState('');
@@ -19,7 +17,7 @@ function App() {
 
   function findWeather() {
     if (city.trim() !== '' && country.trim() !== '') {
-      fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city.trim()},${country.trim()}&APPID=${apikey}`)
+      fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city.trim()},${country.trim()}&APPID=332915fda97cbc7c58e26fd550a80e92`)
         .then(response => {
           if (response.status >= 200 && response.status < 300) {
             return response.json();
