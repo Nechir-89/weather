@@ -73,7 +73,7 @@ function App() {
             {temp}&deg;
           </div>
           <div className='image'>
-            <img src={`http://openweathermap.org/img/wn/${iconId}@2x.png`} alt='Weather Icon' />
+            <img src={`https://openweathermap.org/img/wn/${iconId}@2x.png`} alt='Weather Icon' />
           </div>
           <div className='description'>{weatherDesciption}</div>
           <div className='minAndMaxTemp'>
